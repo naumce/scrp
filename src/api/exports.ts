@@ -1,4 +1,4 @@
-import { SIDECAR_BASE_URL } from "@/lib/constants"
+import { API_BASE_URL } from "@/lib/constants"
 import { ApiError } from "@/api/client"
 
 export interface ExportParams {
@@ -8,7 +8,7 @@ export interface ExportParams {
 }
 
 export async function exportBusinesses(params: ExportParams): Promise<Blob> {
-  const url = `${SIDECAR_BASE_URL}/api/export`
+  const url = `${API_BASE_URL}/api/export`
 
   const response = await fetch(url, {
     method: "POST",

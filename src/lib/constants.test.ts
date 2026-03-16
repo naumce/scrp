@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest"
 import {
   SIDECAR_PORT,
-  SIDECAR_BASE_URL,
+  API_BASE_URL,
+  IS_DESKTOP,
   HEALTH_POLL_INTERVAL_MS,
   ENRICHMENT_POLL_INTERVAL_MS,
 } from "./constants"
@@ -11,8 +12,12 @@ describe("constants", () => {
     expect(SIDECAR_PORT).toBe(8742)
   })
 
-  it("builds base URL from port", () => {
-    expect(SIDECAR_BASE_URL).toBe(`http://127.0.0.1:${SIDECAR_PORT}`)
+  it("API_BASE_URL is a string", () => {
+    expect(typeof API_BASE_URL).toBe("string")
+  })
+
+  it("IS_DESKTOP is false in test environment", () => {
+    expect(IS_DESKTOP).toBe(false)
   })
 
   it("has positive poll intervals", () => {

@@ -1,0 +1,15 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8742:8742"
+    environment:
+      LBS_HOST: "0.0.0.0"
+      LBS_PORT: "8742"
+      LBS_ALLOWED_ORIGINS: "http://localhost:5173,http://localhost:4173"
+    volumes:
+      - backend-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  backend-data:

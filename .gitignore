@@ -21,6 +21,7 @@ backend/*.spec
 
 # Environment
 .env
+.env.production.local
 
 # Logs
 logs/

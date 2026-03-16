@@ -1,4 +1,4 @@
-import { SIDECAR_BASE_URL } from "@/lib/constants"
+import { API_BASE_URL } from "@/lib/constants"
 import type { ApiResponse } from "@/types/api"
 
 export class ApiError extends Error {
@@ -15,7 +15,7 @@ async function request<T>(
   path: string,
   options: RequestInit = {},
 ): Promise<T> {
-  const url = `${SIDECAR_BASE_URL}${path}`
+  const url = `${API_BASE_URL}${path}`
 
   const response = await fetch(url, {
     ...options,
@@ -72,7 +72,7 @@ export function del<T>(path: string): Promise<T> {
 
 export async function fetchHealth(): Promise<boolean> {
   try {
-    const response = await fetch(`${SIDECAR_BASE_URL}/health`)
+    const response = await fetch(`${API_BASE_URL}/health`)
     return response.ok
   } catch {
     return false
