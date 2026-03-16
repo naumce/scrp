@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+
+# Build output
+dist/
+dist-ssr/
+src-tauri/target/
+src-tauri/binaries/
+backend/dist/
+backend/build/
+backend/*.spec
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+
+# Environment
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test/coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.coverage

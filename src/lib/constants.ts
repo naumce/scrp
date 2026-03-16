@@ -1,0 +1,4 @@
+export const SIDECAR_PORT = 8742
+export const SIDECAR_BASE_URL = `http://127.0.0.1:${SIDECAR_PORT}`
+export const HEALTH_POLL_INTERVAL_MS = 1000
+export const ENRICHMENT_POLL_INTERVAL_MS = 2000
